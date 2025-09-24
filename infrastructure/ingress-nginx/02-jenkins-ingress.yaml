@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-server-ingress
+  namespace: jenkins
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    cert-manager.io/acme-http01-self-check: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: "infra-jenkins.jpstudy.org"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins-server
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - infra-jenkins.jpstudy.org
+    secretName: jenkins-tls-cert
