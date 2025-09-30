@@ -17,7 +17,7 @@ spec:
         disktype: application
       containers:
       - name: backend-dev
-        image: chinoel/jpstudy-backend-dev:e4f5g6h
+        image: chinoel/jpstudy-backend-dev:fedfd13
         ports:
         - containerPort: 8080
         - containerPort: 9090
