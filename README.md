@@ -1,13 +1,6 @@
-"# infra" 
+# Infra
 
-
-# Add To Nginx Ingress
-## 홈서버는 생각보다 번거롭다.. 포트 고정 필요 
-```shell
-helm install ingress-nginx ingress-nginx/ingress-nginx `
-  --namespace ingress-nginx `
-  --create-namespace `
-  --set controller.service.type=NodePort `
-  --set controller.service.nodePorts.http=30080 `
-  --set controller.service.nodePorts.https=30443
-```
+1. sealed-secret 적용할 것
+2. 실행 기준은 sealed-secret-private.yaml
+3. seal-secrets.ps1 (Windows) 또는 seal-secrets.sh 사용
+4. 인코딩은 base64_encoder.py를 사용

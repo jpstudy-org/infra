@@ -1,3 +1,5 @@
 **/sealed-secret-private.yaml
 **/grafana-values.yaml
 **/api-spec.json
+**/config.json
+**.env
