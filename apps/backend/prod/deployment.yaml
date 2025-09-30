@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      serviceAccountName: jpstudy-app-ksa
+      nodeSelector:
+        disktype: application
+      containers:
+      - name: backend
+        image: chinoel/jpstudy-backend:e4f5g6h
+        ports:
+        - containerPort: 8080
+        - containerPort: 9090
+        envFrom:
+        - configMapRef:
+            name: jpstudy-app-config
+        - secretRef:
+            name: jpstudy-app-secret
