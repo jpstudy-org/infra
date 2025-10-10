@@ -14,7 +14,7 @@ spec:
         auth:
           existingSecret: "postgresql-secret"
           secretKeys:
-            postgresPasswordKey: "postgres-password"
+            postgresqlPasswordKey: "postgres-password"
           username: "hino6383"
           database: "jpstudy"
         primary:
