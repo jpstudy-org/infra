@@ -12,9 +12,6 @@ spec:
       labels:
         app: backend-dev
     spec:
-      serviceAccountName: jpstudy-app
-      nodeSelector:
-        disktype: application
       containers:
       - name: backend-dev
         image: chinoel/jpstudy-backend-dev:ce2e82e
