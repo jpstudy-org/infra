@@ -5,6 +5,6 @@ metadata:
 data:
   FRONTEND_URI: https://jpstudy.org
   POSTGRES_URL: jdbc:postgresql://postgresql.database.svc.cluster.local:5432/jpstudy
-  DDL: validate
+  DDL: "false"
   FLYWAY_ENABLED: "true"
   CLOUDFLARE_BUCKET_NAME: jpstudy
