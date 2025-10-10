@@ -12,9 +12,9 @@ spec:
     helm:
       values: |
         auth:
-          existingSecret: "postgresql-secret"
+          existingSecret: postgresql-secret
           secretKeys:
-            postgresqlPasswordKey: "postgres-password"
+            userPasswordKey: postgresql-password
           username: "hino6383"
           database: "jpstudy"
         primary:
