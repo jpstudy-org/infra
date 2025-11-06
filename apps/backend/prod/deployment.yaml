@@ -12,9 +12,6 @@ spec:
       labels:
         app: backend
     spec:
-      serviceAccountName: jpstudy-app-ksa
-      nodeSelector:
-        disktype: application
       containers:
       - name: backend
         image: chinoel/jpstudy-backend:b12b3a1
