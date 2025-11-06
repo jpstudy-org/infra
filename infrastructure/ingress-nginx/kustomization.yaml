@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - 01-argocd-ingress.yaml
   - 02-jenkins-ingress.yaml
-  - 03-dev-backend-ingress.yaml
+  # - 03-dev-backend-ingress.yaml
+  - 04-backend-ingress.yaml
