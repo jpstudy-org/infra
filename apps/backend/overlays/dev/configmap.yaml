@@ -6,7 +6,7 @@ data:
   FRONTEND_URI: "https://jpstudy.org"
   BACKEND_URI: "https://api.jpstudy.org"
   POSTGRES_URL: jdbc:postgresql://postgresql.database.svc.cluster.local:5432/jpstudy
-  REDIS_HOST: redis.database.svc.cluster.local
+  REDIS_HOST: redis-master.database.svc.cluster.local
   DDL: none
   FLYWAY_ENABLED: "true"
   CLOUDFLARE_BUCKET_NAME: jpstudy
