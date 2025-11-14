@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-dev
-        image: chinoel/jpstudy-backend-dev:2660943
+        image: chinoel/jpstudy-backend-dev:25a1309
         ports:
         - containerPort: 8080
         - containerPort: 9090
