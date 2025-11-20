@@ -7,6 +7,6 @@ spec:
     app: backend
   ports:
     - name: http-web
-    - protocol: TCP
+      protocol: TCP
       port: 80
       targetPort: 8080
