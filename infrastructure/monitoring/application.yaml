@@ -11,6 +11,12 @@ spec:
     targetRevision: 58.6.0
     helm:
       valuesObject:
+        kubeControllerManager:
+          enabled: false
+        kubeScheduler:
+          enabled: false
+        kubeProxy:
+          enabled: false
         crds:
           enabled: true
         prometheusOperator:
@@ -40,6 +46,27 @@ spec:
             limits:
               cpu: 200m
               memory: 256Mi
+        alertmanager:
+          config:
+            global:
+              resolve_timeout: 5m
+            route:
+              group_by: ['job']
+              group_wait: 30s
+              group_interval: 5m
+              repeat_interval: 12h
+              receiver: 'discord-webhook'
+              routes:
+              - match:
+                  alertname: Watchdog
+                receiver: 'null'
+            
+            receivers:
+            - name: 'null'
+            - name: 'discord-webhook'
+              discord_configs:
+              - webhook_url: 'https://discord.com/api/webhooks/'
+                send_resolved: true
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
