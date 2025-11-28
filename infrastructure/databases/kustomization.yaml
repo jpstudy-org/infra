@@ -4,5 +4,6 @@ kind: Kustomization
 resources:
 - postgresql/sealed-secret.yaml
 - postgresql/postgresql.yaml
-- redis/sealed-secret.yaml
 - redis/redis.yaml
+- rabbitmq/sealed-secret.yaml
+- rabbitmq/rabbitmq.yaml
