@@ -13,3 +13,4 @@ data:
   CLOUDFLARE_BUCKET_NAME: jpstudy
   CORS_ALLOWED_ORIGINS: "https://jpstudy.org,https://infra-admin.jpstudy.org"
   RABBITMQ_HOST: rabbitmq.default.svc.cluster.local
+  SPRING_PROFILES_ACTIVE: prod
